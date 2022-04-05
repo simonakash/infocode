@@ -1,0 +1,116 @@
+/* fonts */
+@font-face {
+  font-family: sf-pro-text;
+  src: url('./fonts/FontsFree-Net-SFProText-Regular.ttf');
+} 
+body{
+  font-family: sf-pro-text;
+}
+
+/* for carousel */
+.carousel {
+    position: relative;
+    height: 100%;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-button-next{
+      margin-right: -30px !important;
+      margin-top: -30px !important;
+      background-color: #fff !important;
+      height: 35px !important;
+      width: 35px !important;
+  }
+  .swiper-button-prev{
+      margin-left: -30px !important;
+      margin-top: -30px !important;
+      background-color: #fff !important;
+      height: 35px !important;
+      width: 35px !important;
+  }
+    .swiper-button-next:after {
+        color: #1479FF !important;   
+        font-size: 17px !important;
+        font-weight: bold !important;
+    }
+    .swiper-button-prev:after {
+        font-size: 17px !important;
+        font-weight: bold !important;
+        color: #1479FF !important;    
+    }
+
+    .img-vector::before{
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 2%;
+      background-image: url('./img/Vector.svg');
+      background-size: contain ;
+      height: 100% !important;
+      width: 100% !important;
+      background-repeat: no-repeat;
+    }
+    .hidden{
+      display: hidden !important;
+    }
+
+/* Tab section */
+.tab-content {
+  display: none;
+  }
+
+  .tab-content.active {
+  display: block;
+  }
+
+/* svgs */
+.btn-svg:hover .tab-svg{
+  transition: all 0.3 ease-in-out;
+  stroke: #1479FF !important;
+
+}
+.btn-svg:focus .tab-svg{
+  transition: all 0.3 ease-in-out;
+  stroke: #1479FF !important;
+
+}
+.faq-btn:focus .faq-svg{
+  transition: all 0.3 ease-in-out;
+  fill: #1479FF !important;
+}
+.activeclass{
+  color:#1479FF !important;
+  border-color: #1479FF !important;
+}
+.activeclass svg{
+  stroke:#1479FF !important; 
+}
