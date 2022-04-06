@@ -10,12 +10,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Resultado</title>
 
+    <!--==sliders css effect when slider active==-->
     <style>
         .swiper-slide-thumb-active{
             --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
             --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
             box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
         }
+
     </style>
 </head>
 
@@ -15210,10 +15212,31 @@
                     </div>
                     <!--====-->
                     <div class="grid items-center md:grid-cols-2 grid-cols-1 mt-12 gap-8 ">
-                        <!--====-->
-                        <div>
+                        <!--==sliders==-->
+                        <div class="flex md:flex-row flex-col gap-4 items-center justify-center">
                             <!--====-->
-                            <div class="mySwiper2 swiper lg:w-[80%!important] sm:w-[60%!important] md:w-[auto!important]">
+                            <div class="mySwiper3 swiper md:order-1 order-2 lg:w-[300px!important] lg:flex-shrink-[50] flex-shrink-[100]">
+                                <div class="swiper-wrapper md:flex-col items-center justify-center">
+                                    <!--====-->
+                                    <div class="swiper-slide sm:w-[80px!important] w-[60px!important]  h-[80px!important m-2">
+                                        <img src="./svg/chips.svg" alt="">
+                                    </div>
+                                    <!--====-->
+                                    <div class="swiper-slide  sm:w-[80px!important] w-[60px!important] h-[80px!important m-2">
+                                        <img src="./svg/chips2.svg" alt="">
+                                    </div>
+                                    <!--====-->
+                                    <div class="swiper-slide  sm:w-[80px!important] w-[60px!important] h-[80px!important m-2">
+                                        <img src="./svg/chips3.svg" alt="">
+                                    </div>
+                                    <!--====-->
+                                    <div class="swiper-slide  sm:w-[80px!important] w-[60px!important] h-[80px!important m-2">
+                                        <img src="./svg/chips4.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--====-->
+                            <div class="mySwiper2 swiper md:order-2 order-1 lg:w-[80%!important] sm:w-[60%!important] md:w-full">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <img src="./svg/sabritas.svg" />
@@ -15230,27 +15253,6 @@
                                 </div>
                                 <div class="swiper-button-next right-10"></div>
                                 <div class="swiper-button-prev left-10"></div>
-                            </div>
-                            <!--====-->
-                            <div class="mySwiper3 swiper ">
-                                <div class="swiper-wrapper justify-center items-center">
-                                    <!--====-->
-                                    <div class="swiper-slide sm:w-[80px!important] w-[60px!important]  h-[80px!important m-2">
-                                        <img  src="./svg/chips.svg" alt="">
-                                    </div>
-                                    <!--====-->
-                                    <div class="swiper-slide  sm:w-[80px!important] w-[60px!important] h-[80px!important m-2">
-                                        <img  src="./svg/chips2.svg" alt="">
-                                    </div>
-                                    <!--====-->
-                                    <div class="swiper-slide  sm:w-[80px!important] w-[60px!important] h-[80px!important m-2">
-                                        <img  src="./svg/chips3.svg" alt="">
-                                    </div>
-                                    <!--====-->
-                                    <div class="swiper-slide  sm:w-[80px!important] w-[60px!important] h-[80px!important m-2">
-                                        <img  src="./svg/chips4.svg" alt="">
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <!--====-->
@@ -15783,7 +15785,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="./javascript.js"></script>
-
+    <!--==sliders script==-->
     <script>
         var swiper = new Swiper(".mySwiper3", {
                 loop: false,
