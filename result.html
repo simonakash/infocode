@@ -17,7 +17,9 @@
             --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
             box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
         }
-
+        .swiper-container-vertical .swiper-wrapper {
+            position: absolute;
+        }
     </style>
 </head>
 
@@ -15213,9 +15215,9 @@
                     <!--====-->
                     <div class="grid items-center md:grid-cols-2 grid-cols-1 mt-12 gap-8 ">
                         <!--==sliders==-->
-                        <div class="flex md:flex-row flex-col gap-4 items-center justify-center">
+                        <div class="flex relative md:flex-row flex-col gap-4 items-center justify-center select-none">
                             <!--====-->
-                            <div class="mySwiper3 swiper md:order-1 order-2 lg:w-[300px!important] lg:flex-shrink-[50] flex-shrink-[100]">
+                            <div class="mySwiper3 swiper md:order-1 order-2 w-[60vh!important] lg:w-[300px!important] lg:flex-shrink-[50] flex-shrink-[100] md:h-[400px!important]">
                                 <div class="swiper-wrapper md:flex-col items-center justify-center">
                                     <!--====-->
                                     <div class="swiper-slide sm:w-[80px!important] w-[60px!important]  h-[80px!important m-2">
@@ -15233,7 +15235,25 @@
                                     <div class="swiper-slide  sm:w-[80px!important] w-[60px!important] h-[80px!important m-2">
                                         <img src="./svg/chips4.svg" alt="">
                                     </div>
+                                    <!--====-->
+                                    <div class="swiper-slide sm:w-[80px!important] w-[60px!important]  h-[80px!important m-2">
+                                        <img src="./svg/chips.svg" alt="">
+                                    </div>
+                                    <!--====-->
+                                    <div class="swiper-slide  sm:w-[80px!important] w-[60px!important] h-[80px!important m-2">
+                                        <img src="./svg/chips3.svg" alt="">
+                                    </div>
+                                    <!--====-->
+                                    <div class="swiper-slide  sm:w-[80px!important] w-[60px!important] h-[80px!important m-2">
+                                        <img src="./svg/chips4.svg" alt="">
+                                    </div>
+                                    <!--====-->
+                                    <div class="swiper-slide sm:w-[80px!important] w-[60px!important]  h-[80px!important m-2">
+                                        <img src="./svg/chips.svg" alt="">
+                                    </div>
                                 </div>
+                                <div class="swiper-button-next md:top-[97%!important] md:right-16 right-4 mt-[-20px!important] transform md:rotate-90"></div>
+                                <div class="swiper-button-prev md:top-3 md:left-16 left-4 mt-[-20px!important] transform md:rotate-90"></div>
                             </div>
                             <!--====-->
                             <div class="mySwiper2 swiper md:order-2 order-1 lg:w-[80%!important] sm:w-[60%!important] md:w-full">
@@ -15249,6 +15269,18 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="./svg/chips4.svg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./svg/sabritas.svg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./svg/chips3.svg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./svg/chips4.svg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./svg/sabritas.svg" />
                                     </div>
                                 </div>
                                 <div class="swiper-button-next right-10"></div>
@@ -15789,10 +15821,20 @@
     <script>
         var swiper = new Swiper(".mySwiper3", {
                 loop: false,
-                spaceBetween: 20,
-                slidesPerView: 4,
-                freeMode: true,
                 watchSlidesProgress: true,
+                freeMode: true,
+                slidesPerView: 4,
+                 breakpoints: {
+                769: {
+                        direction: 'vertical',
+                    },
+                },
+                
+                watchSlidesProgress: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
             });
             var swiper2 = new Swiper(".mySwiper2", {
                 loop: true,
