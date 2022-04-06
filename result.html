@@ -5,10 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Resultado</title>
+
+    <style>
+        .swiper-slide-thumb-active{
+            --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+    </style>
 </head>
 
 <body class="relative">
@@ -10660,8 +10668,7 @@
         <!--====destop menu====-->
         <div class="hidden md:block relative transition-all duration-300 ease-in-out">
             <div :class="{'translate-x-0' : humberger, '-translate-x-full': !humberger  }"
-                class=" bg-black opacity-70 top-20 -mt-1.5 fixed w-full z-20 transform transition-transform duration-700 "
-                style="height: calc(100vh - 150px);">
+                class="z-[100000000000000000!important] h-[calc(100vh-150px)] bg-black opacity-70 top-20 -mt-1.5 fixed w-full z-20 transform transition-transform duration-700 ">
             </div>
             <div class="bg-transparent relative overflow-y-auto w-full max-h-screen z-50">
                 <div :class="{' w-0' : !humberger, ' w-full': humberger  }" class="bg-transparent fixed overflow-y-auto max-h-screen z-50 duration-700"
@@ -15202,45 +15209,47 @@
                         </button>
                     </div>
                     <!--====-->
-                    <div class="grid items-center lg:grid-cols-2 grid-cols-1 mt-12 ">
+                    <div class="grid items-center md:grid-cols-2 grid-cols-1 mt-12 gap-8 ">
                         <!--====-->
-                        <div x-data="{ openTab: '1' }" class="flex md:flex-row flex-col items-center">
+                        <div>
                             <!--====-->
-                            <ul class="flex md:flex-col items-center justify-center flex-row md:order-1 order-2 space-x-3 md:space-x-0 md:space-y-3 space-y-0">
-                                <li @click.prevent="openTab = '1'" class="hover:shadow" :class="openTab==='1' ? 'shadow': ''">
-                                    <a href="#" class="w-20 h-20 rounded cursor-pointer">
-                                        <img src="./svg/chips.svg" alt="">
-                                    </a>
-                                </li>
-                                <li @click.prevent="openTab = '2'" class="hover:shadow" :class="openTab==='2' ? 'shadow': ''">
-                                    <a href="#" class="w-20 h-20 rounded cursor-pointer">
-                                        <img src="./svg/chips2.svg" alt="">
-                                    </a>
-                                </li>
-                                <li @click.prevent="openTab = '3'" class="hover:shadow" :class="openTab==='3' ? 'shadow': ''">
-                                    <a href="#" class="w-20 h-20 rounded cursor-pointer">
-                                        <img src="./svg/chips3.svg" alt="">
-                                    </a>
-                                </li>
-                                <li @click.prevent="openTab = '4'" class="hover:shadow" :class="openTab==='4' ? 'shadow': ''">
-                                    <a href="#" class="w-20 h-20 rounded cursor-pointer">
-                                        <img src="./svg/chips4.svg" alt="">
-                                    </a>
-                                </li>
-                            </ul>
+                            <div class="mySwiper2 swiper lg:w-[80%!important] sm:w-[60%!important] md:w-[auto!important]">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./svg/sabritas.svg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./svg/chips2.svg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./svg/chips3.svg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./svg/chips4.svg" />
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next right-10"></div>
+                                <div class="swiper-button-prev left-10"></div>
+                            </div>
                             <!--====-->
-                            <div class="w-full md:order-2 order-1">
-                                <div class="h-96" x-show="openTab === '1'">
-                                    <img class="mx-auto h-full w-full" src="./svg/sabritas.svg" alt="">
-                                </div>
-                                <div class="h-96" x-show="openTab === '2'">
-                                    <img class="mx-auto h-full w-full" src="./svg/chips2.svg" alt="">
-                                </div>
-                                <div class="h-96" x-show="openTab === '3'">
-                                    <img class="mx-auto h-full w-full" src="./svg/chips3.svg" alt="">
-                                </div>
-                                <div class="h-96" x-show="openTab === '4'">
-                                    <img class="mx-auto h-full w-full" src="./svg/chips4.svg" alt="">
+                            <div class="mySwiper3 swiper ">
+                                <div class="swiper-wrapper justify-center items-center">
+                                    <!--====-->
+                                    <div class="swiper-slide sm:w-[80px!important] w-[60px!important]  h-[80px!important m-2">
+                                        <img  src="./svg/chips.svg" alt="">
+                                    </div>
+                                    <!--====-->
+                                    <div class="swiper-slide  sm:w-[80px!important] w-[60px!important] h-[80px!important m-2">
+                                        <img  src="./svg/chips2.svg" alt="">
+                                    </div>
+                                    <!--====-->
+                                    <div class="swiper-slide  sm:w-[80px!important] w-[60px!important] h-[80px!important m-2">
+                                        <img  src="./svg/chips3.svg" alt="">
+                                    </div>
+                                    <!--====-->
+                                    <div class="swiper-slide  sm:w-[80px!important] w-[60px!important] h-[80px!important m-2">
+                                        <img  src="./svg/chips4.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -15774,6 +15783,27 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="./javascript.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper3", {
+                loop: false,
+                spaceBetween: 20,
+                slidesPerView: 4,
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+            var swiper2 = new Swiper(".mySwiper2", {
+                loop: true,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                thumbs: {
+                    swiper: swiper,
+                },
+            });
+    </script>
 </body>
 
 </html>
